@@ -3,7 +3,11 @@ pipeline {
   stages {
     stage('Remove old docker images') {
       steps {
-        sh('./docker_clean.sh')
+       script {
+         try {
+         sh('./docker_clean.sh')
+         } catch(error) {print(error)}
+       }
       }
     }
     stage('Build docker image') {
