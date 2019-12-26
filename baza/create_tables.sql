@@ -60,8 +60,8 @@ CREATE TABLE public.Kustosz (
                 Kustosz_id INTEGER NOT NULL DEFAULT nextval('public.kustosz_id_seq'),
                 Imie VARCHAR NOT NULL,
                 Nazwisko VARCHAR NOT NULL,
-                Stopien_naukowy VARCHAR NOT NULL,
-                Wystawa_id INTEGER NOT NULL,
+                Stopien_naukowy VARCHAR,
+                Wystawa_id INTEGER,
                 CONSTRAINT kustosz_id PRIMARY KEY (Kustosz_id)
 );
 
@@ -107,9 +107,9 @@ CREATE SEQUENCE public.dzielo_sztuki_id_seq;
 CREATE TABLE public.Dzielo_sztuki (
                 Dzielo_sztuki INTEGER NOT NULL DEFAULT nextval('public.dzielo_sztuki_id_seq'),
                 Tytul VARCHAR NOT NULL,
-                Cena VARCHAR NOT NULL,
+                Cena VARCHAR,
                 Data_powstania VARCHAR NOT NULL,
-                Styl_id INTEGER NOT NULL,
+                Styl_id INTEGER,
                 Wystawa_id INTEGER,
                 CONSTRAINT dzielo_sztuki_id PRIMARY KEY (Dzielo_sztuki)
 );

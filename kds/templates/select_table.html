@@ -1,0 +1,27 @@
+{% extends "layout.html" %} {% block content %}
+<div class="content-section">
+
+    <table class="table">
+        <thead class="thead-light">
+             <tr>
+                <th scope="col">Id</th>
+                {% for field in form if field.name is not in ['csrf_token', 'submit'] %}
+                    <th scope="col"> {{ field.label }} </th>
+                {% endfor %}
+            </tr>
+        </thead>
+
+            {% for record in records %}
+                <tr>
+                    {% for field in record %}
+                        <td> {{ field }} </td>
+                    {% endfor %}
+                </tr>
+
+            {% endfor %}
+    </table>
+
+
+</div>
+
+{% endblock content %}
