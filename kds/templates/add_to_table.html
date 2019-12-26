@@ -1,0 +1,22 @@
+{% extends "layout.html" %} {% block content %}
+<div class="content-section">
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Dodaj rekord do tabeli</legend>
+
+            {% for field in form if field.name is not in ['csrf_token', 'submit'] %}
+            <div class="form-group">
+                {{ field.label }}
+                {{ field }}
+            </div>
+            {% endfor %}
+
+        </fieldset>
+        <div class="form-group">
+            {{ form.submit(class="btn btn-outline-info") }}
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

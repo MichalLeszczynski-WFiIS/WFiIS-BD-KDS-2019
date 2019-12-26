@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block content %}
+<div class="content-section">
+
+            {% for table_name in tables %}
+            <div class="form-group">
+                <button class="btn btn-outline-info">
+                    <a href="{{ url_for('add_to_table', table_name=table_name)}}">
+                        {{ table_name.replace("_", " ") }}
+                    </a>
+                </button>
+            </div>
+            {% endfor %}
+
+</div>
+
+{% endblock content %}
