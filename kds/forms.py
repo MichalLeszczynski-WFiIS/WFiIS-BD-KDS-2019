@@ -4,7 +4,6 @@ from wtforms import (
     SubmitField,
     BooleanField,
     IntegerField,
-    FloatField,
     DateField,
 )
 from wtforms.validators import DataRequired
@@ -35,7 +34,7 @@ class Dzielo_sztuki(FlaskForm):
 class Udzial_w_tworzeniu_dziela(FlaskForm):
     Autor_id = IntegerField("Autor ID", validators=[DataRequired()])
     Dzielo_sztuki_id = IntegerField("Dzielo Sztuki ID", validators=[DataRequired()])
-    Procentowy_udzial = FloatField("Procentowy Udzial", validators=[DataRequired()])
+    Procentowy_udzial = IntegerField("Procentowy Udzial", validators=[DataRequired()])
     submit = SubmitField("Dodaj")
 
 
@@ -44,9 +43,11 @@ class Wystawa(FlaskForm):
     Miejsce_ekspozycji_id = StringField(
         "Miejsce ekspozycji ID", validators=[DataRequired()]
     )
-    Czas_trwania = StringField("Czas trwania", validators=[DataRequired()])
     Data_rozpoczecia = DateField(
         "Data rozpoczecia (YYYY-MM-DD)", validators=[DataRequired()]
+    )
+    Data_zakonczenia = DateField(
+        "Data zakonczenia (YYYY-MM-DD)", validators=[DataRequired()]
     )
     submit = SubmitField("Dodaj")
 
@@ -81,7 +82,7 @@ class Kustosz(FlaskForm):
 
 
 class Patron(FlaskForm):
-    Imie = StringField("Nazwa", validators=[DataRequired()])
+    Imie = StringField("Imie", validators=[DataRequired()])
     Nazwisko = StringField("Nazwisko", validators=[DataRequired()])
     Zawod = StringField("Zawod")
     submit = SubmitField("Dodaj")

@@ -4,7 +4,9 @@
     <table class="table">
         <thead class="thead-light">
              <tr>
-                <th scope="col">Id</th>
+                 {% if form.__class__.__name__ is not in ['Umowa', 'Udzial_w_tworzeniu_dziela'] %}
+                <th scope="col">ID</th>
+                 {% endif %}
                 {% for field in form if field.name is not in ['csrf_token', 'submit'] %}
                     <th scope="col"> {{ field.label }} </th>
                 {% endfor %}

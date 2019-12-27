@@ -46,8 +46,8 @@ CREATE TABLE public.Wystawa (
                 Wystawa_id INTEGER NOT NULL DEFAULT nextval('public.wystawa_id_seq'),
                 Nazwa VARCHAR NOT NULL,
                 Miejsce_ekspozycji_id INTEGER NOT NULL,
-                Czas_trwania TIME NOT NULL,
                 Data_rozpoczecia DATE NOT NULL,
+                Data_zakonczenia DATE NOT NULL,
                 CONSTRAINT wystawa_id PRIMARY KEY (Wystawa_id)
 );
 
@@ -105,23 +105,24 @@ ALTER SEQUENCE public.styl_id_seq OWNED BY public.Styl.Styl_id;
 CREATE SEQUENCE public.dzielo_sztuki_id_seq;
 
 CREATE TABLE public.Dzielo_sztuki (
-                Dzielo_sztuki INTEGER NOT NULL DEFAULT nextval('public.dzielo_sztuki_id_seq'),
+                Dzielo_sztuki_id INTEGER NOT NULL DEFAULT nextval('public.dzielo_sztuki_id_seq'),
                 Tytul VARCHAR NOT NULL,
                 Cena VARCHAR,
                 Data_powstania VARCHAR NOT NULL,
                 Styl_id INTEGER,
                 Wystawa_id INTEGER,
-                CONSTRAINT dzielo_sztuki_id PRIMARY KEY (Dzielo_sztuki)
+                CONSTRAINT dzielo_sztuki_id PRIMARY KEY (Dzielo_sztuki_id)
 );
 
 
-ALTER SEQUENCE public.dzielo_sztuki_id_seq OWNED BY public.Dzielo_sztuki.Dzielo_sztuki;
+ALTER SEQUENCE public.dzielo_sztuki_id_seq OWNED BY public.Dzielo_sztuki.Dzielo_sztuki_id;
+
 
 CREATE TABLE public.Udzial_w_tworzeniu_dziela (
                 Autor_id INTEGER NOT NULL,
-                Dzielo_sztuki INTEGER NOT NULL,
+                Dzielo_sztuki_id INTEGER NOT NULL,
                 Procentowy_udzial INTEGER,
-                CONSTRAINT udzial_w_tworzeniu_dziela_id PRIMARY KEY (Autor_id, Dzielo_sztuki)
+                CONSTRAINT udzial_w_tworzeniu_dziela_id PRIMARY KEY (Autor_id, Dzielo_sztuki_id)
 );
 
 
@@ -182,8 +183,8 @@ ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
 ALTER TABLE public.Udzial_w_tworzeniu_dziela ADD CONSTRAINT dzielo_sztuki_autorstwo_fk
-FOREIGN KEY (Dzielo_sztuki)
-REFERENCES public.Dzielo_sztuki (Dzielo_sztuki)
+FOREIGN KEY (Dzielo_sztuki_id)
+REFERENCES public.Dzielo_sztuki (Dzielo_sztuki_id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;

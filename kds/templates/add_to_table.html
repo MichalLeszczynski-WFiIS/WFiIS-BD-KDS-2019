@@ -7,7 +7,7 @@
 
             {% for field in form if field.name is not in ['csrf_token', 'submit'] %}
             <div class="form-group">
-                {{ field.label }}
+                {{ field.label }} <br>
                 {{ field }}
             </div>
             {% endfor %}
