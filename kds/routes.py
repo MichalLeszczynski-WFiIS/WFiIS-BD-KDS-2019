@@ -12,7 +12,7 @@ from kds.forms import (
     Wystawa,
 )
 from kds import app
-from kds.db_functions import insert_value, select_from
+from kds.db_functions import insert_value, select_from, select_fun
 
 
 def gen_table():
@@ -39,6 +39,18 @@ def home():
 @app.route("/doc")
 def doc():
     return render_template("doc.html")
+
+
+@app.route("/zal")
+def zal():
+    records = select_from("Kustosz_wystawa")
+    kustosz_count = select_from("kustosz", "COUNT(*)")
+    wystawa_count = select_from("wystawa", "COUNT(*)")
+    counts = [kustosz_count, wystawa_count]
+
+    return render_template(
+        "zal.html", title="Dodaj rekord", records=records, counts=counts
+    )
 
 
 @app.route("/add_to_table/<table_name>", methods=["GET", "POST"])
@@ -76,5 +88,5 @@ def select(table_name):
 
     records = select_from(table_name)
     return render_template(
-        "select_table.html", title="Dodaj rekord", records=records, form=form
+        "select_table.html", title="Raport", records=records, form=form
     )

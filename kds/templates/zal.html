@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block content %}
+
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">Wystawa ID</th>
+        <th scope="col">Kustosz ID</th>
+        <th scope="col">Imię</th>
+        <th scope="col">Nazwisko</th>
+        <th scope="col">Stopień naukowy</th>
+        <th scope="col">Nazwa Wystawy</th>
+        <th scope="col">Miejsce ekspozycji ID</th>
+        <th scope="col">Data rozpoczęcia Wystawy</th>
+        <th scope="col">Data zakończenia Wystawy</th>
+    </tr>
+    </thead>
+
+    {% for record in records %}
+    <tr>
+        {% for field in record %}
+        <td> {{ field }}</td>
+        {% endfor %}
+    </tr>
+
+    {% endfor %}
+</table>
+
+<table class="table">
+    <thead class="thead-light">
+    <tr>
+        <th scope="col">Ilość wystaw:</th>
+        <th scope="col">Ilość kustoszy:</th>
+    </tr>
+    </thead>
+
+    <tr>
+        {% for field in counts %}
+        <td> {{ field[0][0] }}</td>
+        {% endfor %}
+    </tr>
+
+</table>
+
+{% endblock content %}

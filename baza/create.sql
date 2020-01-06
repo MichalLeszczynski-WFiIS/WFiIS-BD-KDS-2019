@@ -188,3 +188,5 @@ REFERENCES public.Dzielo_sztuki (Dzielo_sztuki_id)
 ON DELETE NO ACTION
 ON UPDATE NO ACTION
 NOT DEFERRABLE;
+
+CREATE VIEW Kustosz_wystawa AS SELECT * FROM Kustosz k JOIN Wystawa w USING (Wystawa_id);

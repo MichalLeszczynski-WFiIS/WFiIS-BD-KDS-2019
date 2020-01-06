@@ -1,6 +1,9 @@
 import psycopg2
 
-host="185.238.75.42"
+# host="185.238.75.42"
+
+host = "localhost"
+
 
 def insert_value(name, form):
     conn = psycopg2.connect(
@@ -25,13 +28,27 @@ def insert_value(name, form):
     conn.close()
 
 
-def select_from(name):
+def select_from(name, what="*"):
     conn = psycopg2.connect(
         host=host, database="postgres", user="ml", password="docker"
     )
     cur = conn.cursor()
     print("Selecting values")
-    sql = "SELECT * FROM {};".format(name)
+    sql = "SELECT {} FROM {};".format(what, name)
+    print(sql)
+    cur.execute(sql)
+    records = cur.fetchall()
+    conn.close()
+    return records
+
+
+def select_fun(fun):
+    conn = psycopg2.connect(
+        host=host, database="postgres", user="ml", password="docker"
+    )
+    cur = conn.cursor()
+    print("Selecting values")
+    sql = "SELECT * {};".format(fun)
     print(sql)
     cur.execute(sql)
     records = cur.fetchall()
