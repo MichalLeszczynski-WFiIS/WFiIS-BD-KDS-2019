@@ -1,5 +1,4 @@
 flask
-postgres
 flask_wtf
 postgres
 
