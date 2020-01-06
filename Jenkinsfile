@@ -17,4 +17,7 @@ pipeline {
       }
     }
   }
+  environment {
+  CLEAR_DB = "FALSE"
+  }
 }
