@@ -1,0 +1,24 @@
+# docke-compose.yml
+version: "3"
+services:
+  kds:
+    build: .
+    depends_on:
+      - postgres
+    environment:
+      FLASK_ENV: development
+      PORT: 80
+    ports:
+      - "80:80"
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./baza/create.sql:/docker-entrypoint-initdb.d/1-create.sql
+      - ./baza/pop.sql:/docker-entrypoint-initdb.d/2-pop.sql
+    environment:
+      POSTGRES_USER: ml
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: postgres

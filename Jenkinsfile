@@ -1,36 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Remove old docker images') {
-      steps {
-       script {
-         try {
-         sh('./docker_clean.sh')
-         } catch(error) {print(error)}
-       }
-      }
-    }
     stage('Build docker image') {
       steps {
-        sh('docker image build -t ${DOCKER_USER}/${DOCKER_IMAGE}:1.1.${BUILD_NUMBER} .')
+        sh('docker-compose build')
       }
     }
     stage('Run docker image') {
       steps {
-        sh('docker run -d -p 80:80 ${DOCKER_USER}/${DOCKER_IMAGE}:1.1.${BUILD_NUMBER}')
+        sh('docker-compose up -d')
       }
     }
-    stage('Push docker image') {
-      steps {
-        withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-          sh('docker image push ${DOCKER_USER}/${DOCKER_IMAGE}:1.1.${BUILD_NUMBER}')
-        }
-      }
-    }
-  }
-  environment {
-    DOCKER_USER = 'michalleszczynski'
-    DOCKER_TAG = '${BUILD_NUMBER}'
-    DOCKER_IMAGE = 'katalog-dziel-sztuki'
   }
 }

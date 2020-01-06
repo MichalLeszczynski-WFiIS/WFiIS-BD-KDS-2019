@@ -1,9 +1,10 @@
 import psycopg2
 
+host="185.238.75.42"
 
 def insert_value(name, form):
     conn = psycopg2.connect(
-        host="localhost", database="postgres", user="ml", password="docker"
+        host=host, database="postgres", user="ml", password="docker"
     )
     cur = conn.cursor()
     print("Inserting values")
@@ -26,7 +27,7 @@ def insert_value(name, form):
 
 def select_from(name):
     conn = psycopg2.connect(
-        host="localhost", database="postgres", user="ml", password="docker"
+        host=host, database="postgres", user="ml", password="docker"
     )
     cur = conn.cursor()
     print("Selecting values")
