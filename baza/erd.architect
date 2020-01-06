@@ -19,7 +19,7 @@
     <column id="COL3" populated="true" UUID="9bc7d71d-3ac7-45ee-b3dc-e17872a2ba57" autoIncrement="false" autoIncrementSequenceName="Styl_Nazwa_seq" defaultValue="" name="Nazwa" nullable="0" physicalName="Nazwa" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL4" populated="true" UUID="6380baba-f83e-46de-b7a7-28e2f1bdb3d9" autoIncrement="false" autoIncrementSequenceName="Styl_Epoka_seq" defaultValue="" name="Epoka" nullable="0" physicalName="Epoka" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL4" populated="true" UUID="6380baba-f83e-46de-b7a7-28e2f1bdb3d9" autoIncrement="false" autoIncrementSequenceName="Styl_Region_seq" defaultValue="" name="Region" nullable="0" physicalName="Region" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     </folder>
@@ -68,16 +68,16 @@
     <column id="COL16" populated="true" UUID="2343e8a2-d159-4419-a495-19ed1797f300" autoIncrement="false" autoIncrementSequenceName="Dzielo_sztuki_Tytul_seq" defaultValue="" name="Tytul" nullable="0" physicalName="Tytul" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL17" populated="true" UUID="3f8f8387-5ced-4ba5-9ba6-0089037d83d4" autoIncrement="false" autoIncrementSequenceName="Dzielo_sztuki_Cena_seq" defaultValue="" name="Cena" nullable="0" physicalName="Cena" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL17" populated="true" UUID="3f8f8387-5ced-4ba5-9ba6-0089037d83d4" autoIncrement="false" autoIncrementSequenceName="Dzielo_sztuki_Cena_seq" defaultValue="" name="Cena" nullable="1" physicalName="Cena" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL18" populated="true" UUID="fe2d0e4c-1b3a-4a81-a71e-ea557c28a1bc" autoIncrement="false" autoIncrementSequenceName="Dzielo_sztuki_Data_powstania_seq" defaultValue="" name="Data_powstania" nullable="0" physicalName="Data_powstania" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL19" populated="true" UUID="97885717-da21-466d-b84e-f54b211733d5" autoIncrement="false" autoIncrementSequenceName="Styl_Styl_id_seq_1" defaultValue="" name="Styl_id" nullable="0" physicalName="Styl_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL19" populated="true" UUID="97885717-da21-466d-b84e-f54b211733d5" autoIncrement="false" autoIncrementSequenceName="Styl_Styl_id_seq_1" defaultValue="" name="Styl_id" nullable="1" physicalName="Styl_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL20" populated="true" UUID="d2d1e7d8-85e6-4dac-96a8-3c568417b783" autoIncrement="false" autoIncrementSequenceName="Wystawa_Wystawa_id_seq" defaultValue="" name="Wystawa_id" nullable="0" physicalName="Wystawa_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL20" populated="true" UUID="d2d1e7d8-85e6-4dac-96a8-3c568417b783" autoIncrement="false" autoIncrementSequenceName="Wystawa_Wystawa_id_seq" defaultValue="" name="Wystawa_id" nullable="1" physicalName="Wystawa_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -103,10 +103,10 @@
     <column id="COL26" populated="true" UUID="1ad58348-7db9-4a0c-9a97-c68fd60f0462" autoIncrement="false" autoIncrementSequenceName="Miejsce_ekspozycji_Miejsce_ekspozycji_id_seq" defaultValue="" name="Miejsce_ekspozycji_id" nullable="0" physicalName="Miejsce_ekspozycji_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL27" populated="true" UUID="a6c7497f-7ed1-469f-aab7-7a2c6fa2d4fd" autoIncrement="false" autoIncrementSequenceName="Wystawa_Czas_trwania_seq" defaultValue="" name="Czas_trwania" nullable="0" physicalName="Czas_trwania" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="92" userDefinedTypeUUID="10d6960f-169d-47c2-860a-37341342b1d5" >
+    <column id="COL27" populated="true" UUID="099b30b7-1811-4873-af06-9a625f20a6aa" autoIncrement="false" autoIncrementSequenceName="Wystawa_Data_rozpoczecia_seq" defaultValue="" name="Data_rozpoczecia" nullable="0" physicalName="Data_rozpoczecia" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
      <remarks></remarks>
     </column>
-    <column id="COL28" populated="true" UUID="099b30b7-1811-4873-af06-9a625f20a6aa" autoIncrement="false" autoIncrementSequenceName="Wystawa_Data_rozpoczecia_seq" defaultValue="" name="Data_rozpoczecia" nullable="0" physicalName="Data_rozpoczecia" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
+    <column id="COL28" populated="true" UUID="a6c7497f-7ed1-469f-aab7-7a2c6fa2d4fd" autoIncrement="false" autoIncrementSequenceName="Wystawa_Data_zakonczenia_seq" defaultValue="" name="Data_zakonczenia" nullable="0" physicalName="Data_zakonczenia" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="91" userDefinedTypeUUID="ee349be3-6af2-46e1-b305-975f5354b009" >
      <remarks></remarks>
     </column>
     </folder>
@@ -135,7 +135,7 @@
     <column id="COL35" populated="true" UUID="b34bdbac-19a9-48ce-aeff-b106dbb7cd90" autoIncrement="false" autoIncrementSequenceName="Kustosz_Stopien_naukowy_seq" defaultValue="" name="Stopien_naukowy" nullable="0" physicalName="Stopien_naukowy" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL36" populated="true" UUID="6487ed5d-c54e-4982-8a68-0c02a569a8dc" autoIncrement="false" autoIncrementSequenceName="Wystawa_Wystawa_id_seq_2" defaultValue="" name="Wystawa_id" nullable="0" physicalName="Wystawa_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL36" populated="true" UUID="6487ed5d-c54e-4982-8a68-0c02a569a8dc" autoIncrement="false" autoIncrementSequenceName="Wystawa_Wystawa_id_seq_2" defaultValue="" name="Wystawa_id" nullable="1" physicalName="Wystawa_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -279,36 +279,36 @@
    </folder>
   </table>
   <relationships>
-   <relationship id="REL75" populated="true" UUID="9c88f51a-f991-407e-818c-2a64d509fa83" deferrability="7" deleteRule="3" fk-table-ref="TAB14" fkCardinality="7" identifying="false" name="Styl_Dzielo_sztuki_fk" physicalName="styl_dzielo_sztuki_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
+   <relationship id="REL75" populated="true" UUID="9c88f51a-f991-407e-818c-2a64d509fa83" deferrability="7" deleteRule="3" fk-table-ref="TAB14" fkCardinality="7" identifying="false" name="Styl_Dzielo_sztuki_fk" physicalName="Styl_Dzielo_sztuki_fk" pk-table-ref="TAB1" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP76" populated="true" UUID="fde94074-afa0-4831-9bcf-a16be14f3423" fk-column-ref="COL19" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL2" />
    </relationship>
-   <relationship id="REL77" populated="true" UUID="a81da6b5-dd6f-475a-8d2d-2fe5c57766d8" deferrability="7" deleteRule="3" fk-table-ref="TAB68" fkCardinality="7" identifying="true" name="Autor_Autorstwo_fk" physicalName="autor_autorstwo_fk" pk-table-ref="TAB7" pkCardinality="2" updateRule="3" >
+   <relationship id="REL77" populated="true" UUID="a81da6b5-dd6f-475a-8d2d-2fe5c57766d8" deferrability="7" deleteRule="3" fk-table-ref="TAB68" fkCardinality="7" identifying="true" name="Autor_Autorstwo_fk" physicalName="Autor_Autorstwo_fk" pk-table-ref="TAB7" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP78" populated="true" UUID="a9ba22e8-c619-4d9f-854c-ba6d53d8e418" fk-column-ref="COL69" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL8" />
    </relationship>
-   <relationship id="REL79" populated="true" UUID="a8005c9e-5e73-44d3-a611-68809b96c62e" deferrability="7" deleteRule="3" fk-table-ref="TAB68" fkCardinality="7" identifying="true" name="Dzielo_sztuki_Autorstwo_fk" physicalName="dzielo_sztuki_autorstwo_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
+   <relationship id="REL79" populated="true" UUID="a8005c9e-5e73-44d3-a611-68809b96c62e" deferrability="7" deleteRule="3" fk-table-ref="TAB68" fkCardinality="7" identifying="true" name="Dzielo_sztuki_Autorstwo_fk" physicalName="Dzielo_sztuki_Autorstwo_fk" pk-table-ref="TAB14" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP80" populated="true" UUID="3053a54c-5efd-4b11-b7f9-b3c85592bcbf" fk-column-ref="COL70" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL15" />
    </relationship>
-   <relationship id="REL81" populated="true" UUID="10c11ce8-e8ed-4b26-999a-4b49b5a31db9" deferrability="7" deleteRule="3" fk-table-ref="TAB60" fkCardinality="7" identifying="true" name="Wystawa_Umowa_fk" physicalName="wystawa_umowa_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
+   <relationship id="REL81" populated="true" UUID="10c11ce8-e8ed-4b26-999a-4b49b5a31db9" deferrability="7" deleteRule="3" fk-table-ref="TAB60" fkCardinality="7" identifying="true" name="Wystawa_Umowa_fk" physicalName="Wystawa_Umowa_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP82" populated="true" UUID="fe3ecf03-70f8-4445-96a0-457ce900b3b7" fk-column-ref="COL62" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL24" />
    </relationship>
-   <relationship id="REL83" populated="true" UUID="ea8f9433-0943-4098-b0d9-786607f8fb3f" deferrability="7" deleteRule="3" fk-table-ref="TAB31" fkCardinality="7" identifying="false" name="Wystawa_Kustosz_fk" physicalName="wystawa_kustosz_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
+   <relationship id="REL83" populated="true" UUID="ea8f9433-0943-4098-b0d9-786607f8fb3f" deferrability="7" deleteRule="3" fk-table-ref="TAB31" fkCardinality="7" identifying="false" name="Wystawa_Kustosz_fk" physicalName="Wystawa_Kustosz_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP84" populated="true" UUID="077b0dbf-4c90-4f75-b836-461489371c2f" fk-column-ref="COL36" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL24" />
    </relationship>
-   <relationship id="REL85" populated="true" UUID="e9d0f276-01d6-4884-8183-af4ecdf1cffb" deferrability="7" deleteRule="3" fk-table-ref="TAB14" fkCardinality="7" identifying="false" name="Wystawa_Dzielo_sztuki_fk" physicalName="wystawa_dzielo_sztuki_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
+   <relationship id="REL85" populated="true" UUID="e9d0f276-01d6-4884-8183-af4ecdf1cffb" deferrability="7" deleteRule="3" fk-table-ref="TAB14" fkCardinality="7" identifying="false" name="Wystawa_Dzielo_sztuki_fk" physicalName="Wystawa_Dzielo_sztuki_fk" pk-table-ref="TAB23" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP86" populated="true" UUID="f86b0b45-12d0-4ae2-b618-ffb7a5c2e27c" fk-column-ref="COL20" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL24" />
    </relationship>
-   <relationship id="REL87" populated="true" UUID="4ff88eed-21cd-4bb1-9f27-e5ac05feed3d" deferrability="7" deleteRule="3" fk-table-ref="TAB60" fkCardinality="7" identifying="true" name="Patron_Umowa_fk" physicalName="patron_umowa_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
+   <relationship id="REL87" populated="true" UUID="4ff88eed-21cd-4bb1-9f27-e5ac05feed3d" deferrability="7" deleteRule="3" fk-table-ref="TAB60" fkCardinality="7" identifying="true" name="Patron_Umowa_fk" physicalName="Patron_Umowa_fk" pk-table-ref="TAB39" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP88" populated="true" UUID="7b047399-1fcc-42a8-8533-42fc9c1ddff3" fk-column-ref="COL61" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL40" />
    </relationship>
-   <relationship id="REL89" populated="true" UUID="0a2d671f-5188-49be-b9c5-0aae15aee736" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="false" name="Miejsce_ekspozycji_Wystawa_fk" physicalName="miejsce_ekspozycji_wystawa_fk" pk-table-ref="TAB46" pkCardinality="2" updateRule="3" >
+   <relationship id="REL89" populated="true" UUID="0a2d671f-5188-49be-b9c5-0aae15aee736" deferrability="7" deleteRule="3" fk-table-ref="TAB23" fkCardinality="7" identifying="false" name="Miejsce_ekspozycji_Wystawa_fk" physicalName="Miejsce_ekspozycji_Wystawa_fk" pk-table-ref="TAB46" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP90" populated="true" UUID="cd4d6f0e-8c57-47fd-864f-3244213475d0" fk-column-ref="COL26" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL47" />
    </relationship>
-   <relationship id="REL91" populated="true" UUID="4d5495bc-1575-47bc-9aac-ce6f10dab900" deferrability="7" deleteRule="3" fk-table-ref="TAB46" fkCardinality="7" identifying="false" name="Kategoria_miejsc_ekspozycji_Miejsce_ekspozycji_fk" physicalName="kategoria_miejsc_ekspozycji_miejsce_ekspozycji_fk" pk-table-ref="TAB54" pkCardinality="2" updateRule="3" >
+   <relationship id="REL91" populated="true" UUID="4d5495bc-1575-47bc-9aac-ce6f10dab900" deferrability="7" deleteRule="3" fk-table-ref="TAB46" fkCardinality="7" identifying="false" name="Kategoria_miejsc_ekspozycji_Miejsce_ekspozycji_fk" physicalName="Kategoria_miejsc_ekspozycji_Miejsce_ekspozycji_fk" pk-table-ref="TAB54" pkCardinality="2" updateRule="3" >
     <column-mapping id="CMP92" populated="true" UUID="a5e7bdc3-0356-46c9-bf42-b148782ba314" fk-column-ref="COL51" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL55" />
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="false" target-schema="public"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.PostgresDDLGenerator" allow-connection="true" target-schema="public"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="" jobName="" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="0.9999999999999998" viewportX="530" viewportY="220" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
