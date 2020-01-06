@@ -3,11 +3,19 @@ pipeline {
     node {
       label 'Ferinir'
     }
-
   }
   stages {
+     stage('Cleaning old images') {
+         when {
+            triggeredBy 'UserIdCause'
+        }
+        steps {
+            sh('docker-compose rm postgres')
+        }
+     }
     stage('Build docker image') {
       steps {
+        echo "${currentBuild.buildCauses}"
         sh 'docker-compose build'
       }
     }
@@ -16,8 +24,5 @@ pipeline {
         sh 'docker-compose up -d'
       }
     }
-  }
-  environment {
-  CLEAR_DB = "FALSE"
   }
 }
