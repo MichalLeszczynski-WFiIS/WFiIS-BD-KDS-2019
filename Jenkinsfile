@@ -1,14 +1,19 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'Ferinir'
+    }
+
+  }
   stages {
     stage('Build docker image') {
       steps {
-        sh('docker-compose build')
+        sh 'docker-compose build'
       }
     }
     stage('Run docker image') {
       steps {
-        sh('docker-compose up -d')
+        sh 'docker-compose up -d'
       }
     }
   }
