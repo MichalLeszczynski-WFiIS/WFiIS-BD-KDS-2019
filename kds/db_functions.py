@@ -1,8 +1,6 @@
 import psycopg2
 
-# host="185.238.75.42"
-
-host = "localhost"
+host = "185.238.75.42"
 
 
 def insert_value(name, form):
