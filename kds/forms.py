@@ -10,9 +10,9 @@ from wtforms.validators import DataRequired
 
 
 class Autor(FlaskForm):
-    imie = StringField("Imie", validators=[DataRequired()])
+    imie = StringField("Imię", validators=[DataRequired()])
     nazwisko = StringField("Nazwisko", validators=[DataRequired()])
-    czy_zywy = BooleanField("Czy zywy")
+    czy_zywy = BooleanField("Czy żywy")
     submit = SubmitField("Dodaj")
 
 
@@ -23,7 +23,7 @@ class Styl(FlaskForm):
 
 
 class Dzielo_sztuki(FlaskForm):
-    Tytul = StringField("Tytul", validators=[DataRequired()])
+    Tytul = StringField("Tytuł", validators=[DataRequired()])
     Cena = StringField("Cena")
     Data_powstania = DateField("Data Powstania (YYYY-MM-DD)")
     Styl_id = IntegerField("Styl ID")
@@ -33,8 +33,8 @@ class Dzielo_sztuki(FlaskForm):
 
 class Udzial_w_tworzeniu_dziela(FlaskForm):
     Autor_id = IntegerField("Autor ID", validators=[DataRequired()])
-    Dzielo_sztuki_id = IntegerField("Dzielo Sztuki ID", validators=[DataRequired()])
-    Procentowy_udzial = IntegerField("Procentowy Udzial", validators=[DataRequired()])
+    Dzielo_sztuki_id = IntegerField("Dzieło Sztuki ID", validators=[DataRequired()])
+    Procentowy_udzial = IntegerField("Procentowy Udział", validators=[DataRequired()])
     submit = SubmitField("Dodaj")
 
 
@@ -44,10 +44,10 @@ class Wystawa(FlaskForm):
         "Miejsce ekspozycji ID", validators=[DataRequired()]
     )
     Data_rozpoczecia = DateField(
-        "Data rozpoczecia (YYYY-MM-DD)", validators=[DataRequired()]
+        "Data rozpoczęcia (YYYY-MM-DD)", validators=[DataRequired()]
     )
     Data_zakonczenia = DateField(
-        "Data zakonczenia (YYYY-MM-DD)", validators=[DataRequired()]
+        "Data zakończenia (YYYY-MM-DD)", validators=[DataRequired()]
     )
     submit = SubmitField("Dodaj")
 
@@ -55,7 +55,7 @@ class Wystawa(FlaskForm):
 class Miejsce_ekspozycji(FlaskForm):
     Nazwa = StringField("Nazwa", validators=[DataRequired()])
     Max_liczba_zwiedzajacych = IntegerField(
-        "Max liczba zwiedzajacych", validators=[DataRequired()]
+        "Max liczba zwiedzających", validators=[DataRequired()]
     )
     Liczba_miejsc_parkingowych = IntegerField(
         "Liczba miejsc parkingowych", validators=[DataRequired()]
@@ -69,22 +69,22 @@ class Miejsce_ekspozycji(FlaskForm):
 
 class Kategoria_miejsc_ekspozycji(FlaskForm):
     Nazwa = StringField("Nazwa", validators=[DataRequired()])
-    Przynaleznosc = StringField("Przynaleznosc", validators=[DataRequired()])
+    Przynaleznosc = StringField("Przynależność", validators=[DataRequired()])
     submit = SubmitField("Dodaj")
 
 
 class Kustosz(FlaskForm):
-    Imie = StringField("Imie", validators=[DataRequired()])
+    Imie = StringField("Imię", validators=[DataRequired()])
     Nazwisko = StringField("Nazwisko", validators=[DataRequired()])
-    Stopien_naukowy = StringField("Stopien naukowy")
+    Stopien_naukowy = StringField("Stopień naukowy")
     Wystawa_id = IntegerField("Wystawa ID")
     submit = SubmitField("Dodaj")
 
 
 class Patron(FlaskForm):
-    Imie = StringField("Imie", validators=[DataRequired()])
+    Imie = StringField("Imię", validators=[DataRequired()])
     Nazwisko = StringField("Nazwisko", validators=[DataRequired()])
-    Zawod = StringField("Zawod")
+    Zawod = StringField("Zawód")
     submit = SubmitField("Dodaj")
 
 
