@@ -10,7 +10,7 @@ pipeline {
             triggeredBy 'UserIdCause'
         }
         steps {
-            sh('docker-compose rm postgres')
+            sh('docker-compose rm -sf postgres')
         }
      }
     stage('Build docker image') {
