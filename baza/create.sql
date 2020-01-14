@@ -191,3 +191,17 @@ ON UPDATE NO ACTION
 NOT DEFERRABLE;
 
 CREATE VIEW Kustosz_wystawa AS SELECT * FROM Kustosz k JOIN Wystawa w USING (Wystawa_id);
+
+CREATE OR REPLACE FUNCTION ins_dziela_sztuki() RETURNS TRIGGER AS'
+DECLARE
+def_wystawa INTEGER:=1;
+BEGIN
+IF (new.wystawa_is=0) THEN
+new.wystawa_id=def_wystawa;
+END IF;
+RETURN NEW;
+END;
+' LANGUAGE 'plpgsql'
+
+CREATE TRIGGER trig_dziela_sztuki BEFORE INSERT ON dzielo_sztuki
+FOR EACH ROW EXECUTE PROCEDURE ins_dziela_sztuki();
