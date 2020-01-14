@@ -9,12 +9,12 @@ services:
       FLASK_ENV: development
       PORT: 80
     ports:
-      - "10080:80"
+      - "80:80"
 
   postgres:
     image: postgres
     ports:
-      - "15432:5432"
+      - "5432:5432"
     volumes:
       - ./baza/create.sql:/docker-entrypoint-initdb.d/1-create.sql
       - ./baza/pop.sql:/docker-entrypoint-initdb.d/2-pop.sql
