@@ -1,7 +1,7 @@
 import psycopg2
 
 host = "185.238.75.42"
-port = 15432
+port = 5432
 
 
 def insert_value(name, form):
