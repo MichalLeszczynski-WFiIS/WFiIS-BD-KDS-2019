@@ -44,10 +44,10 @@ class Wystawa(FlaskForm):
         "Miejsce ekspozycji ID", validators=[DataRequired()]
     )
     Data_rozpoczecia = DateField(
-        "Data rozpoczęcia (YYYY-MM-DD)", validators=[DataRequired()]
+        "Data rozpoczęcia (YYYY-MM-DD)"
     )
     Data_zakonczenia = DateField(
-        "Data zakończenia (YYYY-MM-DD)", validators=[DataRequired()]
+        "Data zakończenia (YYYY-MM-DD)"
     )
     submit = SubmitField("Dodaj")
 
@@ -91,6 +91,6 @@ class Patron(FlaskForm):
 class Umowa(FlaskForm):
     Patron_id = IntegerField("Patron ID", validators=[DataRequired()])
     Wystawa_id = IntegerField("Wystawa ID", validators=[DataRequired()])
-    Data_zawarcia = DateField("Data Zawarcia (YYYY-MM-DD)", validators=[DataRequired()])
+    Data_zawarcia = DateField("Data Zawarcia (YYYY-MM-DD)")
     Rodzaj_patronatu = StringField("Rodzaj Patronatu", validators=[DataRequired()])
     submit = SubmitField("Dodaj")
