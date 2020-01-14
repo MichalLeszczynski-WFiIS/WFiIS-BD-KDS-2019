@@ -196,7 +196,7 @@ CREATE OR REPLACE FUNCTION ins_dziela_sztuki() RETURNS TRIGGER AS'
 DECLARE
 def_wystawa INTEGER:=1;
 BEGIN
-IF (new.wystawa_is=0) THEN
+IF (new.wystawa_id=0) THEN
 new.wystawa_id=def_wystawa;
 END IF;
 RETURN NEW;
