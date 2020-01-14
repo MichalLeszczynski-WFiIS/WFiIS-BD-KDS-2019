@@ -201,7 +201,7 @@ new.wystawa_id=def_wystawa;
 END IF;
 RETURN NEW;
 END;
-' LANGUAGE 'plpgsql'
+' LANGUAGE 'plpgsql';
 
 CREATE TRIGGER trig_dziela_sztuki BEFORE INSERT ON dzielo_sztuki
 FOR EACH ROW EXECUTE PROCEDURE ins_dziela_sztuki();
