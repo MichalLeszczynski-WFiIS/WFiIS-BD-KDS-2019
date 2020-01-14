@@ -1,4 +1,5 @@
 
+CREATE DOMAIN data AS DATE DEFAULT '2012-01-01';
 
 CREATE SEQUENCE public.kategoria_miejsc_ekspozycji_id_seq;
 
@@ -46,8 +47,8 @@ CREATE TABLE public.Wystawa (
                 Wystawa_id INTEGER NOT NULL DEFAULT nextval('public.wystawa_id_seq'),
                 Nazwa VARCHAR NOT NULL,
                 Miejsce_ekspozycji_id INTEGER NOT NULL,
-                Data_rozpoczecia DATE NOT NULL,
-                Data_zakonczenia DATE NOT NULL,
+                Data_rozpoczecia data,
+                Data_zakonczenia data,
                 CONSTRAINT wystawa_id PRIMARY KEY (Wystawa_id)
 );
 
@@ -71,7 +72,7 @@ ALTER SEQUENCE public.kustosz_id_seq OWNED BY public.Kustosz.Kustosz_id;
 CREATE TABLE public.Umowa (
                 Patron_id INTEGER NOT NULL,
                 Wystawa_id INTEGER NOT NULL,
-                Data_zawarcia DATE NOT NULL,
+                Data_zawarcia data,
                 Rodzaj_patronatu VARCHAR NOT NULL,
                 CONSTRAINT umowa_id PRIMARY KEY (Patron_id, Wystawa_id)
 );
@@ -108,7 +109,7 @@ CREATE TABLE public.Dzielo_sztuki (
                 Dzielo_sztuki_id INTEGER NOT NULL DEFAULT nextval('public.dzielo_sztuki_id_seq'),
                 Tytul VARCHAR NOT NULL,
                 Cena VARCHAR,
-                Data_powstania VARCHAR NOT NULL,
+                Data_powstania data,
                 Styl_id INTEGER,
                 Wystawa_id INTEGER,
                 CONSTRAINT dzielo_sztuki_id PRIMARY KEY (Dzielo_sztuki_id)
