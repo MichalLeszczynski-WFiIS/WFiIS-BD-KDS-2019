@@ -36,11 +36,6 @@ def home():
     return render_template("home.html")
 
 
-@app.route("/doc")
-def doc():
-    return render_template("doc.html")
-
-
 @app.route("/zal")
 def zal():
     records = select_from("Kustosz_wystawa")
